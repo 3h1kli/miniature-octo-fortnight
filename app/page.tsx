@@ -430,13 +430,13 @@ export default function GrowGardenRewards() {
                 /* Offers Section */
                 <>
                   <div className="bg-gradient-to-r from-green-500 to-blue-500 text-white p-6 text-center">
-                    <h2 className="text-xl font-bold mb-2">Complete 2 quests to claim! 📝</h2>
+                    <h2 className="text-xl font-bold mb-2">كمّل مهمتين علشان تستلم! 📝</h2>
                     <p className="text-sm opacity-90">
-                      If a quest isn't working, please try another one. If you're having issues with every quest, please
-                      try on a different device! 📲🖥️
+                      لو مهمة مش شغالة معاك، جرب مهمة تانية.
+                      ولو كل المهمات واقفة معاك، جرب تستخدم جهاز تاني! 📲🖥️
                     </p>
                   </div>
-
+ 
                   <div className="p-6">
                     <div className="space-y-4">
                       {offersLoading ? (
