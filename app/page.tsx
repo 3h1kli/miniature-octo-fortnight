@@ -161,7 +161,7 @@ export default function GrowGardenRewards() {
       setSelectedCards(selectedCards.filter((cardId) => cardId !== id))
     } else {
       if (selectedCards.length >= maxSelections) {
-        setShowWarning("You can only select up to 3 items!")
+        setShowWarning("مسموحلك تختار 3 حاجات بس")
         setTimeout(() => setShowWarning(""), 3000)
         return
       }
@@ -171,12 +171,12 @@ export default function GrowGardenRewards() {
 
   const handleGenerate = async () => {
     if (!username) {
-      setShowWarning("Please enter a username")
+      setShowWarning("اكتب اليوزر نيم بتاعك")
       setTimeout(() => setShowWarning(""), 3000)
       return
     }
     if (selectedCards.length === 0) {
-      setShowWarning("Please select at least one item!")
+      setShowWarning("!لازم تختار حاجة واحدة على الأقل!")
       setTimeout(() => setShowWarning(""), 3000)
       return
     }
@@ -286,7 +286,7 @@ export default function GrowGardenRewards() {
               <div className="max-w-md mx-auto mb-4">
                 <Input
                   type="text"
-                  placeholder="Enter Username"
+                  placeholder="دخل اليوزر نيم بتاعك"
                   value={username}
                   onChange={(e) => {
                     setUsername(e.target.value)
@@ -296,9 +296,9 @@ export default function GrowGardenRewards() {
                   className="text-center text-lg p-4 rounded-lg border-2 border-white/30 bg-white/90 backdrop-blur-sm"
                   disabled={checking}
                 />
-                {checking && <p className="text-yellow-200 mt-2 animate-pulse">🔍 Checking username...</p>}
+                {checking && <p className="text-yellow-200 mt-2 animate-pulse">🔍 جاري التحقق من اسم المستخدم...</p>}
                 {username && !checking && isValidUser && (
-                  <p className="mt-2 font-semibold text-green-200">✅ Valid username</p>
+                  <p className="mt-2 font-semibold text-green-200">اسم المستخدم صحيح ✅</p>
                 )}
               </div>
 
@@ -320,7 +320,7 @@ export default function GrowGardenRewards() {
 
             {/* Instructions */}
             <p className="text-center text-white text-lg mb-6 font-semibold">
-              Choose the items you want to get (up to {maxSelections}):
+              اختار الحاجات اللي عايز تاخدها (بحد أقصى {maxSelections}):
             </p>
 
             {/* Cards Grid */}
@@ -399,7 +399,7 @@ export default function GrowGardenRewards() {
                     ) : (
                       /* Profile Confirmation */
                       <div className="space-y-6">
-                        <h3 className="text-xl font-bold text-gray-800">Profile Confirmation</h3>
+                        <h3 className="text-xl font-bold text-gray-800">تأكد من البروفايل بتاعك</h3>
                         {profileData && (
                           <div className="space-y-4">
                             <img
@@ -408,7 +408,7 @@ export default function GrowGardenRewards() {
                               className="w-24 h-24 rounded-full mx-auto border-4 border-blue-400"
                             />
                             <p className="text-lg font-semibold text-blue-600">{profileData.username}</p>
-                            <p className="text-gray-600">Is this you?</p>
+                            <p className="text-gray-600">هو ده البروفايل بتاعك؟</p>
                             <div className="flex space-x-4 justify-center">
                               <Button
                                 onClick={() => confirmProfile(true)}
