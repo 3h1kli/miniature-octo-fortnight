@@ -23,80 +23,23 @@ export default function GrowGardenRewards() {
 
   const maxSelections = 3
 
-  const gardenItems = [
-    { id: 1, name: "Bone Blossom", image: "https://static.wikia.nocookie.net/growagarden/images/3/3c/BoneBlossomCrop.png" },
-    { id: 2, name: "Burning Bud", image: "https://static.wikia.nocookie.net/growagarden/images/2/27/Burning_Bud_Product.PNG" },
-    { id: 3, name: "Sugar Apple", image: "https://static.wikia.nocookie.net/growagarden/images/a/a7/SugarAppleIcon.png" },
-    { id: 4, name: "Kitsune", image: "https://static.wikia.nocookie.net/growagarden/images/4/4d/Kitsune_.png" },
-    { id: 5, name: "Red Fox", image: "https://static.wikia.nocookie.net/growagarden/images/d/d5/RedFox.png" },
-    { id: 6, name: "Maple Apple", image: "https://static.wikia.nocookie.net/growagarden/images/d/da/MapleAppleProduce.png" },
-    { id: 7, name: "Spiked Mango", image: "https://static.wikia.nocookie.net/growagarden/images/1/11/SpikedMangoProduce.png" },
-    { id: 8, name: "T-Rex", image: "https://static.wikia.nocookie.net/growagarden/images/f/f8/T-Rex.png" },
-    { id: 9, name: "Fennec Fox", image: "https://static.wikia.nocookie.net/growagarden/images/e/e8/FennecFoxIcon.png" },
-    { id: 10, name: "Bald Eagle", image: "https://static.wikia.nocookie.net/growagarden/images/d/d2/BaldEagle.png" },
-    {
-      id: 11,
-      name: "Red Dragon",
-      image: "https://static.wikia.nocookie.net/growagarden/images/6/6e/RedDragonRender.png",
-    },
-    { id: 12, name: "Spinosaurus", image: "https://static.wikia.nocookie.net/growagarden/images/2/24/Spinosaurus.png" },
-    { id: 13, name: "Dragonfly", image: "https://static.wikia.nocookie.net/growagarden/images/c/c9/DragonflyIcon.png" },
-    { id: 14, name: "Queen Bee", image: "https://static.wikia.nocookie.net/growagarden/images/7/7a/Queen_bee.png" },
-    { id: 15, name: "Blood Owl", image: "https://static.wikia.nocookie.net/growagarden/images/0/00/Blood_Owl_Icon.png" },
-    {
-      id: 16,
-      name: "kiwi",
-      image: "https://static.wikia.nocookie.net/growagarden/images/e/ea/Kiwi.png",
-    },
-    { id: 17, name: "x10 Candy Blossom", image: "https://cdn.jsdelivr.net/gh/monorolls/grow@main/6_candy_blossom.png" },
-    { id: 18, name: "Raccoon", image: "https://static.wikia.nocookie.net/growagarden/images/5/54/Raccon_Better_Quality.png" },
-    { id: 19, name: "Hedgehog Pet", image: "https://static.wikia.nocookie.net/growagarden/images/4/46/HedgehogPet.png" },
-    { id: 20, name: "282T¢(seckles)", image: "https://cdn.jsdelivr.net/gh/monorolls/grow@main/Plants1.png" },
-    { id: 21, name: "Night Owl", image: "https://static.wikia.nocookie.net/growagarden/images/3/3e/NightOwlPic.png" },
-    { id: 22, name: "Hamster", image: "https://static.wikia.nocookie.net/growagarden/images/c/c5/HamsterIcon.webp" },
-    {
-      id: 23,
-      name: "Chicken Zombie",
-      image: "https://static.wikia.nocookie.net/growagarden/images/b/be/Chicken_Zombie_Icon.png",
-    },
-    { id: 24, name: "Firefly", image: "https://static.wikia.nocookie.net/growagarden/images/c/cd/Again.png" },
-    { id: 25, name: "Owl", image: "https://static.wikia.nocookie.net/growagarden/images/4/46/Owlpng.png" },
-    { id: 26, name: "Golden Bee", image: "https://static.wikia.nocookie.net/growagarden/images/e/e8/GoldenBee.png" },
-    { id: 27, name: "Echo Frog", image: "https://static.wikia.nocookie.net/growagarden/images/3/30/Echo_frog.png" },
-    { id: 28, name: "Cooked Owl", image: "https://static.wikia.nocookie.net/growagarden/images/f/fc/Cooked_Owl.png" },
-    { id: 29, name: "Cow", image: "https://static.wikia.nocookie.net/growagarden/images/8/84/Cow.png" },
-    { id: 30, name: "Polar Bear", image: "https://static.wikia.nocookie.net/growagarden/images/2/25/Polarbear.png" },
-    { id: 31, name: "Sea Otter", image: "https://static.wikia.nocookie.net/growagarden/images/c/c3/Sea_Otter.png" },
-    {
-      id: 32,
-      name: "Silver Monkey",
-      image: "https://static.wikia.nocookie.net/growagarden/images/a/a7/Silvermonkey.png",
-    },
-    { id: 33, name: "Mushroom", image: "https://cdn.jsdelivr.net/gh/monorolls/grow@main/mushroom%20(1).webp" },
-    { id: 34, name: "Grape", image: "https://cdn.jsdelivr.net/gh/monorolls/grow@main/grape%20(1).webp" },
-    { id: 35, name: "Friendship Pot", image: "https://cdn.jsdelivr.net/gh/monorolls/grow@main/Friendship_Pot.webp" },
-    { id: 36, name: "Ember Lily", image: "https://cdn.jsdelivr.net/gh/monorolls/grow@main/ember.webp" },
-    { id: 37, name: "Disco Bee", image: "https://cdn.jsdelivr.net/gh/monorolls/grow@main/disco.webp" },
-    { id: 38, name: "Butterfly Pet", image: "https://cdn.jsdelivr.net/gh/monorolls/grow@main/butterfly.webp" },
-    { id: 39, name: "Mango", image: "https://cdn.jsdelivr.net/gh/monorolls/grow@main/mango.webp" },
-    { id: 40, name: "Dragonfruit", image: "https://cdn.jsdelivr.net/gh/monorolls/grow@main/dragonfruit.webp" },
-    { id: 41, name: "Cactus", image: "https://cdn.jsdelivr.net/gh/monorolls/grow@main/cactus.webp" },
-    { id: 42, name: "Coconut", image: "https://cdn.jsdelivr.net/gh/monorolls/grow@main/coconut.webp" },
-    { id: 43, name: "Bamboo", image: "https://cdn.jsdelivr.net/gh/monorolls/grow@main/bamboo.webp" },
-    { id: 44, name: "Apple", image: "https://cdn.jsdelivr.net/gh/monorolls/grow@main/apple.webp" },
-    { id: 45, name: "Pumpkin", image: "https://cdn.jsdelivr.net/gh/monorolls/grow@main/pumpkin.webp" },
-    { id: 46, name: "Watermelon", image: "https://cdn.jsdelivr.net/gh/monorolls/grow@main/watermelon.webp" },
-    { id: 47, name: "Daffodil", image: "https://cdn.jsdelivr.net/gh/monorolls/grow@main/daffodil.webp" },
-    { id: 48, name: "Corn", image: "https://cdn.jsdelivr.net/gh/monorolls/grow@main/corn.webp" },
-    { id: 49, name: "Tomato", image: "https://cdn.jsdelivr.net/gh/monorolls/grow@main/tomato.webp" },
-    { id: 50, name: "Orange", image: "https://cdn.jsdelivr.net/gh/monorolls/grow@main/orange.webp" },
-    { id: 51, name: "Blueberry", image: "https://cdn.jsdelivr.net/gh/monorolls/grow@main/blueberry.webp" },
-    { id: 52, name: "Carrot", image: "https://cdn.jsdelivr.net/gh/monorolls/grow@main/carrot.webp" },
-    { id: 53, name: "Flower Pack", image: "https://cdn.jsdelivr.net/gh/monorolls/grow@main/flowerpack.webp" },
-    { id: 54, name: "Beanstalk", image: "https://cdn.jsdelivr.net/gh/monorolls/grow@main/beanstalk.png" },
-    { id: 55, name: "Strawberry", image: "https://cdn.jsdelivr.net/gh/monorolls/grow@main/Strawberry.webp" },
-    { id: 56, name: "Super Seed", image: "https://cdn.jsdelivr.net/gh/monorolls/grow@main/Super_Seed.webp" },
-    { id: 57, name: "Moon Blossom", image: "https://static.wikia.nocookie.net/growagarden/images/7/77/MoonBlossomBetterQuality.png" },
+  const gardenItems =[
+{ id: 1, name: "the deer", image: "https://static.wikia.nocookie.net/99-nights-in-the-forest/images/7/73/Bearnormal.png" },
+    { id: 2, name: "The Ram Render", image: "https://static.wikia.nocookie.net/99-nights-in-the-forest/images/3/39/TheRamRender.png" },
+    { id: 3, name: "The Owl Render", image: "https://static.wikia.nocookie.net/99-nights-in-the-forest/images/9/92/TheOwlRender.png" },
+    { id: 4, name: "Wolf", image: "https://static.wikia.nocookie.net/99-nights-in-the-forest/images/c/c8/Wolf.png" },
+    { id: 5, name: "Mammoth", image: "https://static.wikia.nocookie.net/99-nights-in-the-forest/images/a/a5/Mammoth.png" },
+    { id: 6, name: "Alpha Wolf", image: "https://static.wikia.nocookie.net/99-nights-in-the-forest/images/2/29/AlphaWolf.png" },
+    { id: 7, name: "Axe Cultist Render", image: "https://static.wikia.nocookie.net/99-nights-in-the-forest/images/5/51/AxeCultistRender.png" },
+    { id: 8, name: "Dino kid", image: "https://static.wikia.nocookie.net/99-nights-in-the-forest/images/0/04/Dino_Kid.png" },
+    { id: 9, name: "Kraken Kid", image: "https://static.wikia.nocookie.net/99-nights-in-the-forest/images/9/92/Kraken_Kid.png" },
+    { id: 10, name: "Squid Kid", image: "https://static.wikia.nocookie.net/99-nights-in-the-forest/images/6/69/Squid_Kid.png" },
+    { id: 11, name: "Koala Kid", image: "https://static.wikia.nocookie.net/99-nights-in-the-forest/images/b/b7/Koala_Kid.png" },
+    
+  
+    {  id: 13, name: "Spinosaurus I", image: "https://static.wikia.nocookie.net/99-nights-in-the-forest/images/2/2f/Determined_I_New.webp" },
+    {  id: 14, name: "Spinosaurus II", image: "https://static.wikia.nocookie.net/99-nights-in-the-forest/images/2/2f/Determined_I_New.webp" },
+
   ]
 
   const loadingPhases = [
@@ -163,7 +106,7 @@ export default function GrowGardenRewards() {
       setSelectedCards(selectedCards.filter((cardId) => cardId !== id))
     } else {
       if (selectedCards.length >= maxSelections) {
-        setShowWarning("مسموحلك تختار 3 حاجات بس")
+        setShowWarning("You can only select up to 3 items!")
         setTimeout(() => setShowWarning(""), 3000)
         return
       }
@@ -173,12 +116,12 @@ export default function GrowGardenRewards() {
 
   const handleGenerate = async () => {
     if (!username) {
-      setShowWarning("اكتب اليوزر نيم بتاعك")
+      setShowWarning("Please enter a username")
       setTimeout(() => setShowWarning(""), 3000)
       return
     }
     if (selectedCards.length === 0) {
-      setShowWarning("!لازم تختار حاجة واحدة على الأقل!")
+      setShowWarning("Please select at least one item!")
       setTimeout(() => setShowWarning(""), 3000)
       return
     }
@@ -288,7 +231,7 @@ export default function GrowGardenRewards() {
               <div className="max-w-md mx-auto mb-4">
                 <Input
                   type="text"
-                  placeholder="دخل اليوزر نيم بتاعك"
+                  placeholder="Enter Username"
                   value={username}
                   onChange={(e) => {
                     setUsername(e.target.value)
@@ -298,9 +241,9 @@ export default function GrowGardenRewards() {
                   className="text-center text-lg p-4 rounded-lg border-2 border-white/30 bg-white/90 backdrop-blur-sm"
                   disabled={checking}
                 />
-                {checking && <p className="text-yellow-200 mt-2 animate-pulse">🔍 جاري التحقق من اسم المستخدم...</p>}
+                {checking && <p className="text-yellow-200 mt-2 animate-pulse">🔍 Checking username...</p>}
                 {username && !checking && isValidUser && (
-                  <p className="mt-2 font-semibold text-green-200">اسم المستخدم صحيح ✅</p>
+                  <p className="mt-2 font-semibold text-green-200">✅ Valid username</p>
                 )}
               </div>
 
@@ -322,7 +265,7 @@ export default function GrowGardenRewards() {
 
             {/* Instructions */}
             <p className="text-center text-white text-lg mb-6 font-semibold">
-              اختار الحاجات اللي عايز تاخدها (بحد أقصى {maxSelections}):
+              Choose the items you want to get (up to {maxSelections}):
             </p>
 
             {/* Cards Grid */}
@@ -401,7 +344,7 @@ export default function GrowGardenRewards() {
                     ) : (
                       /* Profile Confirmation */
                       <div className="space-y-6">
-                        <h3 className="text-xl font-bold text-gray-800">تأكد من البروفايل بتاعك</h3>
+                        <h3 className="text-xl font-bold text-gray-800">Profile Confirmation</h3>
                         {profileData && (
                           <div className="space-y-4">
                             <img
@@ -410,7 +353,7 @@ export default function GrowGardenRewards() {
                               className="w-24 h-24 rounded-full mx-auto border-4 border-blue-400"
                             />
                             <p className="text-lg font-semibold text-blue-600">{profileData.username}</p>
-                            <p className="text-gray-600">هو ده البروفايل بتاعك؟</p>
+                            <p className="text-gray-600">Is this you?</p>
                             <div className="flex space-x-4 justify-center">
                               <Button
                                 onClick={() => confirmProfile(true)}
@@ -432,13 +375,13 @@ export default function GrowGardenRewards() {
                 /* Offers Section */
                 <>
                   <div className="bg-gradient-to-r from-green-500 to-blue-500 text-white p-6 text-center">
-                    <h2 className="text-xl font-bold mb-2">كمّل مهمتين علشان تستلم! 📝</h2>
+                    <h2 className="text-xl font-bold mb-2">Complete 2 quests to claim! 📝</h2>
                     <p className="text-sm opacity-90">
-                      لو مهمة مش شغالة معاك، جرب مهمة تانية.
-                      ولو كل المهمات واقفة معاك، جرب تستخدم جهاز تاني! 📲🖥️
+                      If a quest isn't working, please try another one. If you're having issues with every quest, please
+                      try on a different device! 📲🖥️
                     </p>
                   </div>
- 
+
                   <div className="p-6">
                     <div className="space-y-4">
                       {offersLoading ? (
